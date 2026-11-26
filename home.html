@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body style="font-family: Georgia, 'Times New Roman', Times, serif;padding-bottom: 100px;padding-top: 50px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary shadow fixed-top">
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+            <a class="navbar-brand" href="#" style="font-weight: bolder;">💰 Smart Expense Tracker</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="list">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item" id="registerNav">
+                        <a class="nav-link active" aria-current="page" href="./register.html">
+                            Register
+                        </a>
+                    </li>
+
+                    <li class="nav-item" id="loginNav">
+                        <a class="nav-link active" aria-current="page" href="./login.html">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item" id="welcomeNav" style="display: none;">
+                        <span class="nav-link text-white" id="welcomeUser"></span>
+                    </li>
+
+                    <li class="nav-item" id="logoutNav" style="display: none;">
+                        <button class="nav-link btn btn-link text-white" id="logoutBtn">
+                            Logout
+                        </button>
+                    </li>
+                    <button class="btn btn-primary" id="expenseBtn"
+                        onclick="window.location.href='expense.html'">
+                        Expense Tracker
+                    </button>
+                </ul>
+                </div>
+                </div>
+
+    </nav>
+    <section class="container">
+        <div class="sectionTwo">
+            <div class="text-center mb-5" style="margin-top: 100px;" id="smart">
+                <h2 style="color: white; font-weight: bolder;">Why Choose Smart Expense Tracker?</h2>
+                <p style="font-weight: bold;color: gray;">Easily manage your income and expenses with powerful features.
+                </p>
+            </div>
+            <div class="mainGrid" style="margin-top: 80px;">
+                <div>
+                    <h1 class="heading">Track Every Rupee<span class="text-primary">Smarter.</span></h1>
+                </div>
+                <div class="img">
+                    <img src="./images/Image.png" alt="" width="500px" height="300px">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section style="border: 1px solid;border: none;padding-top: 100px;" id="About">
+        <div style="margin-bottom: 100px;">
+            <h2 style="text-align: center; text-shadow: whitesmoke;font-weight: bold;font-size: 50px;">About <span
+                    class="text-primary">Smart Expense</span> Tracker</h2>
+            <p class="about-description">
+                    Smart Expense Tracker is a simple and user-friendly web application
+                designed to help you manage your daily finances efficiently.
+                Track your income, monitor expenses, and stay in control of your budget
+                with an easy-to-use interface.
+            </p>
+            <div class="row" style="gap: 8px; margin-top: 100px; padding-left: 20px;">
+                <div class="card">
+                    <h1>💰</h1>
+                    <h4>Track Income</h4>
+                    <p>Add and manage all your income records easily.</p>
+                </div>
+                <div class="card">
+                    <h1>💸</h1>
+                    <h4>Track Expenses</h4>
+                    <p>Keep your daily expenses organized in one place.</p>
+                </div>
+                <div class="card">
+                    <h1>📊</h1>
+                    <h4>Balance Summary</h4>
+                    <p>View your total income, expense and balance instantly.</p>
+                </div>
+                <div class="card">
+                    <h1>💾</h1>
+                    <h4>Secure Storage</h4>
+                    <p>Your transaction data is safely stored using LocalStorage.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <p class="text-center" style="color: grey;">
+                    ✔ Easy to Use |
+                    ✔ Fast Performance |
+                    ✔ Search & Filter Transactions |
+                    ✔ Edit & Delete Records |
+                    ✔ Secure Local Storage
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" id="contact" style="padding-top: 80px;">
+            <div class="text-center mb-5">
+                <h1>Contact Us</h1>
+                <p class="text-center" style="color: grey;font-weight: bold;">Have any questions or suggestions? We'd
+                    love to hear from you.</p>
+            </div>
+            <form id="contactForm" class="contact-form" style="margin-top: -30px;">
+                <div class="row" style="justify-content: center;">
+                    <div class="contact-form" style="margin-top: -30px;">
+                        <div class="contact-field">
+                            <label class="contact-label">Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label class="contact-label">Email</label>
+                            <input type="email" id="email" placeholder="Enter your mail-id" required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label class="contact-label">Message</label>
+                            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./contact.js"></script>
+
+    <script src="./home.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
